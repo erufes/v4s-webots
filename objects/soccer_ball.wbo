@@ -1,0 +1,7 @@
+#VRML_OBJ R2020a utf8
+DEF BALL SoccerBall {
+  translation -0.182283 0.05 -0.297774
+  rotation 0.7071067811865477 0 0.7071067811865477 2.62318
+  radius 0.021
+  mass 0.05
+}

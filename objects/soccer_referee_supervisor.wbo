@@ -1,0 +1,11 @@
+#VRML_OBJ R2020a utf8
+DEF soccer_referee_supervisor Robot {
+  children [
+    Emitter {
+      range 10
+      baudRate 115200
+    }
+  ]
+  controller "soccer_referee_supervisor"
+  supervisor TRUE
+}

@@ -1,0 +1,20 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.9056034732999296 0.40000849660018384 0.14098067879948795 0.9503280704930508
+  position 0.6013217757614256 1.646565016795596 1.36410256598565
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DEF SOCCER_FIELD v4s_soccer_field {
+}
+DEF B1 V4SRobot {
+  robotName "B1"
+}
+DEF soccer_referee_supervisor soccer_referee_supervisor {
+}
+DEF BALL soccer_ball {
+}

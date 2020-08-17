@@ -1,0 +1,17 @@
+#VRML_OBJ R2020a utf8
+
+PROTO soccer_ball [
+  field SFVec3f    translation -0.182283 0.05 -0.297774
+  field SFRotation rotation     0.7071067811865477 0 0.7071067811865477 2.62318
+  field SFFloat    radius       0.021
+  field SFFloat    mass         0.05
+ 
+]
+{
+DEF BALL SoccerBall {
+  translation IS translation
+  rotation IS rotation
+  radius IS radius
+  mass IS mass
+}
+}

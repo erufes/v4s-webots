@@ -1,0 +1,18 @@
+#VRML_OBJ R2020a utf8
+PROTO soccer_referee_supervisor [
+  field SFFloat    supervisorRange    10
+  field SFInt32    supervisorBaudRate 115200
+  field SFString   robotController    "soccer_referee_supervisor"
+]
+{
+DEF soccer_referee_supervisor Robot {
+  children [
+    Emitter {
+      range IS supervisorRange
+      baudRate IS supervisorBaudRate
+    }
+  ]
+  controller IS robotController
+  supervisor TRUE
+}
+}
