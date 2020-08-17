@@ -26,7 +26,7 @@
 #include <webots/robot.h>
 #include <webots/supervisor.h>
 
-#define ROBOTS 1  // number of robots
+#define ROBOTS 6  // number of robots
 #define GOAL_X_LIMIT 0.745
 #define TIME_STEP 64
 
