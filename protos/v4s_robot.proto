@@ -1,5 +1,5 @@
 #VRML_OBJ R2020a utf8
-PROTO V4SRobot [
+PROTO v4s_robot [
   field SFVec3f    translation      0 0.0381772 0
   field SFRotation rotation         0 1 0 0
   field SFFloat    bodyMass         0.2
@@ -8,6 +8,7 @@ PROTO V4SRobot [
   field SFString   robotController  "soccer_player_sample"
   field SFNode     robotAppearance  NULL
   field SFNode     wheelsAppearance NULL
+  field SFBool     synchronization  TRUE
 ]
 
 {
@@ -102,6 +103,7 @@ PROTO V4SRobot [
     }
   ]
   name IS robotName
+  synchronization IS synchronization
   boundingObject USE V4S_ROBOT_SHAPE
   physics DEF ROBOT_PHYSICS Physics {
     density -1
