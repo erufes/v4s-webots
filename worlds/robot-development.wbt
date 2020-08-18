@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9994117288336788 0.02777408366924271 -0.020119556307517838 0.774967639156865
-  position 0.06792989898915647 1.6783885583730218 1.3285000409473884
+  orientation -0.9988548942294302 0.047229497253996576 -0.007633797419945254 1.0235974602496833
+  position 0.12389365468533325 2.3903549058229707 1.5192082398123643
 }
 TexturedBackground {
 }
@@ -11,13 +11,23 @@ TexturedBackgroundLight {
 }
 DEF SOCCER_FIELD v4s_soccer_field {
 }
-DEF B1 V4SRobot {
-  translation -0.11 0.0381772 -4.07842e-07
-  rotation 0 1 0 -1.5707953071795862
-  robotName "B1"
-  robotController "remote_controlled_soccer_player"
-}
 DEF soccer_referee_supervisor soccer_referee_supervisor {
+}
+DEF B1 v4s_robot {
+  translation 0 0.0381772 -0.17
+  robotName "R1"
+  robotController "remote_controlled_soccer_player"
+  robotAppearance Appearance {
+    material Material {
+      diffuseColor 0.1 0.2 0.8
+    }
+  }
+  wheelsAppearance Appearance {
+    material Material {
+      diffuseColor 0.8 0.8 0
+    }
+  }
+  synchronization FALSE
 }
 DEF BALL soccer_ball {
   translation 0.017717 0.02 -0.027774
