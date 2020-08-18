@@ -51,29 +51,33 @@ timestep = int(player.robot.getBasicTimeStep())
 print("Inicializando jogador", player.name, "Do time", player.team, "e ID", player.id)
 
 
+# Teste: girar durante 5 segundos, depois girar ao lado contrário
+dir = 0
+esq = 0
+
+def change_dir(dvel, evel):
+    global dir, esq
+    esq = evel
+    dir = dvel
+
+
 """
     funções que serão fornecidas via tcp/ip
 """
 functions = {
     "echo" : (lambda s: s),
+    "move" : (lambda d, v : change_dir(d, v)),
 }
 
+"""
+    Inicialização da thread do servidor tcp/ip
+"""
 com_thread = threading.Thread(target=run_aplication_server, args = (functions,'localhost', player.get_port(),))
 com_thread.start()
 
-# Teste: girar durante 5 segundos, depois girar ao lado contrário
-dir = 10
-esq = -10
-
-def change_dir(signum, frame):
-    global dir, esq
-    esq = -esq
-    dir = -dir
-    signal.alarm(5)
-
-signal.signal(signal.SIGALRM, change_dir)
-signal.alarm(5)
-
+"""
+    Controle do robô
+"""
 while player.robot.step(timestep) != -1:
     player.motor["direito"].setVelocity(dir)
     player.motor["esquerdo"].setVelocity(esq)
