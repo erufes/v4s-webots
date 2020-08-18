@@ -55,6 +55,8 @@ Nome do robô
 Aparência do robô
 - wheelsAppearance : Appearance<br>
 Aparência de cada roda
+- synchronization : Boolean<br>
+
 
 ## Dados da Equipe:
 O VSSS-ERUS é uma equipe dedicada a implementação do desafio Very Small Size Soccer para competições. É um projeto da ERUS - Equipe de Robótica da UFES, e diversos documentos sobre o projeto podem ser encontrados no site da equipe.
