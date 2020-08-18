@@ -2,7 +2,7 @@
 Projeto Very Small Size Soccer Simulation (V4S) pelo Webots, utilizando comunicação tcp/ip.
 
 ## Sobre
-![Robo girando](docs/midia/robo-girando.gif)
+![Robo girando](docs/midia/robo-girando.gif)<br>
 Base de uma simulação de um time de Very Small Size Soccer feita no webots. Os robôs receberão os comandos através de protocolo tcp/ip e o simulador irá rodar a partida.<br>
 
 A ideia é poder simular de forma realista e personalizável o time de Very Small Size Soccer da ERUS, mas pode ser modificada para simular outros robôs de Very Small Size Soccer.
