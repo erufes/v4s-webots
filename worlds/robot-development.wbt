@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9988548942294302 0.047229497253996576 -0.007633797419945254 1.0235974602496833
-  position 0.12389365468533325 2.3903549058229707 1.5192082398123643
+  orientation -0.9976614598900034 0.06301550006196906 -0.0264699490382394 0.6552399381545008
+  position 0.06643261981400468 1.327987147407922 1.6273732964405991
 }
 TexturedBackground {
 }
@@ -15,7 +15,7 @@ DEF soccer_referee_supervisor soccer_referee_supervisor {
 }
 DEF B1 v4s_robot {
   translation 0 0.0381772 -0.17
-  robotName "R1"
+  robotName "B1"
   robotController "remote_controlled_soccer_player"
   robotAppearance Appearance {
     material Material {
