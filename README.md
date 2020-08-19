@@ -2,6 +2,7 @@
 Projeto Very Small Size Soccer Simulation (V4S) pelo Webots, utilizando comunicação tcp/ip.
 
 ## Sobre
+![Robo girando](docs/midia/robo-girando.gif)<br>
 Base de uma simulação de um time de Very Small Size Soccer feita no webots. Os robôs receberão os comandos através de protocolo tcp/ip e o simulador irá rodar a partida.<br>
 
 A ideia é poder simular de forma realista e personalizável o time de Very Small Size Soccer da ERUS, mas pode ser modificada para simular outros robôs de Very Small Size Soccer.
@@ -55,6 +56,25 @@ Nome do robô
 Aparência do robô
 - wheelsAppearance : Appearance<br>
 Aparência de cada roda
+- synchronization : Boolean<br>
+
+## Controles
+Os controles disponíveis neste projeto permitem controlar os robôs de very small size soccer de forma remota através de protocolo tcp/ip. Os robôs abrem cada um uma porta de acordo com seu time e id:
+
+| Time/id |   1   |   2   |   3   |
+|:-------:|:-----:|:-----:|:-----:|
+| Blue    | 40001 | 40002 | 40003 |
+| Yellow  | 30001 | 30002 | 30003 |
+
+E utilizam JSON-RPC, um protocolo de chamada de procedimento remoto codificado em JSON, para responder aos comandos. Para fazer um robô mover-se, basta enviar para o endereço dele um objeto JSON:
+
+
+    {
+        'method'  : 'move',
+        'params'  : [vel-dir, vel-esq],
+        'jsonrpc' : '2.0',
+        'id'      : id
+    }
 
 ## Dados da Equipe:
 O VSSS-ERUS é uma equipe dedicada a implementação do desafio Very Small Size Soccer para competições. É um projeto da ERUS - Equipe de Robótica da UFES, e diversos documentos sobre o projeto podem ser encontrados no site da equipe.

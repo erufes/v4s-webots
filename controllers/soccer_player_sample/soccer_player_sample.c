@@ -24,7 +24,7 @@
 #include <webots/receiver.h>
 #include <webots/robot.h>
 
-#define ROBOTS 6
+#define ROBOTS 3
 #define TIME_STEP 64
 
 /*

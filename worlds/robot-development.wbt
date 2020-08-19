@@ -1,0 +1,62 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.9975911291850161 0.0638198167338771 -0.027184001975772525 0.6452636725087433
+  position 0.07579015657694219 1.4396876937917287 1.8123899266677819
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DEF SOCCER_FIELD v4s_soccer_field {
+}
+DEF soccer_referee_supervisor soccer_referee_supervisor {
+}
+DEF B1 v4s_robot {
+  translation 2.38824e-07 0.035 -0.47
+  rotation 0 1 0 3.14159
+  robotName "B1"
+  robotController "remote_controlled_soccer_player"
+  robotAppearance Appearance {
+    material Material {
+      diffuseColor 0.1 0.2 0.8
+    }
+  }
+  wheelsAppearance DEF wheel_appearance Appearance {
+    material Material {
+      diffuseColor 0.8 0.8 0
+    }
+  }
+  synchronization FALSE
+}
+DEF B2 v4s_robot {
+  translation -0.35 0.0381772 -2.03924e-08
+  rotation 0 1 0 -1.5707953071795862
+  robotName "B2"
+  robotController "remote_controlled_soccer_player"
+  robotAppearance Appearance {
+    material Material {
+      diffuseColor 0.1 0.6 0.8
+    }
+  }
+  wheelsAppearance USE wheel_appearance
+  synchronization FALSE
+}
+DEF B3 v4s_robot {
+  translation 0.35 0.0381772 0
+  rotation 0 1 0 1.5708
+  robotName "B3"
+  robotController "remote_controlled_soccer_player"
+  robotAppearance Appearance {
+    material Material {
+      diffuseColor 0.3 0 1
+    }
+  }
+  wheelsAppearance USE wheel_appearance
+  synchronization FALSE
+}
+DEF BALL soccer_ball {
+  translation 0.017717 0.02 -0.027774
+  rotation 0 1 0 0
+}
