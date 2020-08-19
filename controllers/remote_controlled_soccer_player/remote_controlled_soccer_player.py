@@ -7,7 +7,6 @@ import socket
 import sys
 import threading
 import re
-# Create a TCP/IP socket
 
 class v4s_robot:
     def __init__(self, robot):
@@ -28,7 +27,7 @@ class v4s_robot:
         self.motor["esquerdo"].setPosition(float('+inf'))
         self.motor["esquerdo"].setVelocity(0.0)
     
-    """ 
+    """
         Função que calcula a porta do robô a partir de seu nome
     """
     def get_port(self):
