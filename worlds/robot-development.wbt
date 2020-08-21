@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.04858810658745208 0.9513229555321998 0.3043416339834672 2.6036550065795634
-  position 1.9890725061761627 1.8810335120341446 -2.475500944350567
+  position 1.8714771264753414 1.7370730157700007 -2.299953600179356
 }
 TexturedBackground {
 }
@@ -430,14 +430,14 @@ DEF BALL soccer_ball {
   translation 0.017717 0.02 -0.027774
   rotation 0 1 0 0
 }
-Robot {
+DEF Simulation_Control Robot {
   children [
     Camera {
       translation 0 2 0
       rotation 1 0 0 -1.5707953071795862
-      fieldOfView 1.047
-      width 1200
-      height 800
+      fieldOfView 0.85
+      width 240
+      height 200
       near 1
       far 2
       antiAliasing TRUE
@@ -447,7 +447,7 @@ Robot {
       baudRate 115200
     }
   ]
-  name "simulationCtrl"
+  name "Simulation_Control"
   controller "simulation_controller"
   supervisor TRUE
 }

@@ -3,6 +3,7 @@
 from controller import Robot, Camera, Node, Supervisor, Field
 from server import run_aplication_server
 import threading
+import base64
 
 """
     Classe Score (mantem placar e o escreve na tela)
@@ -146,6 +147,15 @@ def get_state():
             mensagem[team].append(player_info)
         
     return mensagem
+
+def get_frame(mode = ''):
+    global camera
+    image = []
+    if mode == 'array':
+        image = camera.getImageArray()
+    else:
+        image = str(camera.getImage())
+    return image
     
 functions = {
     "echo" : (lambda s: s),
@@ -154,6 +164,7 @@ functions = {
     "start_sim" : start_sim,
     "reset_objects" : reset_objects,
     "get_state" : get_state,
+    "get_frame" : get_frame,
 }   
 
 com_thread = threading.Thread(target=run_aplication_server, args = (functions,))
