@@ -76,6 +76,28 @@ E utilizam JSON-RPC, um protocolo de chamada de procedimento remoto codificado e
         'id'      : id
     }
 
+Para controlar e obter informações da simulação, um controle é aberto na porta 4002. Os serviços disponíveis são:
+
+- stop_sim : parar a simulação
+- start_sim : iniciar a simulação
+- reset_sim : reiniciar a simulação
+- reset_objects : reposicionar os objetos na posição inicial
+- get_state : obter estado de jogo (responde um dict python)
+<br>
+
+![camera da simulação](docs/midia/sim-control-development.png)
+
+<br>
+E para conseguir as imagens da câmera, o método utilizado é get_frame, onde você pode utilizar com o parâmetro "array" para conseguir a imagem como um array tridimensional de inteiros com os valores RGB de cada pixel da imagem. As imagens são 240px x 200px. Um exemplo da chamada é:
+
+    {
+        'method'  : 'get_frame',
+        'params'  : ['array'],
+        'jsonrpc' : '2.0',
+        'id'      : id
+    }
+
+
 ## Dados da Equipe:
 O VSSS-ERUS é uma equipe dedicada a implementação do desafio Very Small Size Soccer para competições. É um projeto da ERUS - Equipe de Robótica da UFES, e diversos documentos sobre o projeto podem ser encontrados no site da equipe.
 
