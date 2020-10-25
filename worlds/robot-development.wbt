@@ -1,9 +1,10 @@
 #VRML_SIM R2020a utf8
 WorldInfo {
+  title "Desenvolvimento"
 }
 Viewpoint {
-  orientation -0.04858810658745208 0.9513229555321998 0.3043416339834672 2.6036550065795634
-  position 1.8714771264753414 1.7370730157700007 -2.299953600179356
+  orientation -0.021617626644461502 0.960268488585092 0.2782392999717399 2.7357469327246164
+  position 1.5388710489999877 1.642933031287518 -2.6732536083096097
 }
 TexturedBackground {
 }
@@ -15,7 +16,7 @@ DEF SOCCER_FIELD Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "/home/lorena/Documentos/Robotica/v4s-webots/textures/soccer-256.jpg"
+            "../textures/soccer-256.jpg"
           ]
         }
         roughness 1
@@ -29,7 +30,7 @@ DEF SOCCER_FIELD Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "/home/lorena/Documentos/Robotica/v4s-webots/textures/soccer-256.jpg"
+            "../textures/soccer-256.jpg"
           ]
         }
         roughness 1
@@ -65,7 +66,7 @@ DEF SOCCER_FIELD Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "/home/lorena/Documentos/Robotica/v4s-webots/textures/soccer-256.jpg"
+            "../textures/soccer-256.jpg"
           ]
         }
         roughness 1
@@ -378,8 +379,7 @@ DEF SOCCER_FIELD Solid {
   locked TRUE
 }
 DEF B1 v4s_robot {
-  hidden rotation_1 1 0 0 0.5268850002855662
-  hidden rotation_2 1 0 0 0.5260539989987691
+  hidden rotation_2 1 0 0 0.526053999953637
   translation 2.38824e-07 0.035 -0.47
   rotation 0 1 0 3.14159
   robotName "B1"
@@ -397,8 +397,7 @@ DEF B1 v4s_robot {
   synchronization FALSE
 }
 DEF B2 v4s_robot {
-  hidden rotation_1 1 0 0 0.5268850002270198
-  hidden rotation_2 1 0 0 0.5260539973257757
+  hidden rotation_2 1 0 0 0.5260539999536694
   translation -0.35 0.0381772 -2.03924e-08
   rotation 0 1 0 -1.5707953071795862
   robotName "B2"
@@ -412,8 +411,7 @@ DEF B2 v4s_robot {
   synchronization FALSE
 }
 DEF B3 v4s_robot {
-  hidden rotation_1 1 0 0 0.5268850001525104
-  hidden rotation_2 1 0 0 0.5260539976054026
+  hidden rotation_2 1 0 0 0.5260539999536686
   translation 0.35 0.0381772 0
   rotation 0 1 0 1.5708
   robotName "B3"
@@ -427,7 +425,7 @@ DEF B3 v4s_robot {
   synchronization FALSE
 }
 DEF BALL soccer_ball {
-  translation 0.017717 0.02 -0.027774
+  translation 0.017717 0.02 -0.267774
   rotation 0 1 0 0
 }
 DEF Simulation_Control Robot {

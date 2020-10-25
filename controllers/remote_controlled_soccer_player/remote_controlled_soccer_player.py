@@ -8,6 +8,7 @@ import sys
 import threading
 import re
 
+
 class v4s_robot:
     def __init__(self, robot):
         # Pega informações do robô

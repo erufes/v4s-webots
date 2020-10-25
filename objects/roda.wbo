@@ -1,0 +1,35 @@
+#VRML_OBJ R2020a utf8
+Transform {
+  translation 0.06 0 0.12
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
+      endPoint Solid {
+        translation 0 -4.89665e-14 6.74634e-14
+        rotation 1 0 0 1.5708
+        children [
+          DEF roda_shape Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.8 0.8 0
+              }
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.05
+            }
+          }
+        ]
+        boundingObject USE roda_shape
+        physics Physics {
+        }
+      }
+    }
+  ]
+}
