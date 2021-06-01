@@ -20,8 +20,8 @@ class v4s_robot:
         
         # Inicializa os motores do robô
         self.motor = {
-            "direito" : robot.getMotor("right wheel motor"),
-            "esquerdo" : robot.getMotor("left wheel motor"),
+            "direito" : robot.getDevice("right wheel motor"),
+            "esquerdo" : robot.getDevice("left wheel motor"),
         }
         self.motor["direito"].setPosition(float('+inf'))
         self.motor["direito"].setVelocity(0.0)
@@ -33,9 +33,9 @@ class v4s_robot:
     """
     def get_port(self):
         port = 0
-        if self.team is 'B':
+        if self.team == 'B':
             port = 40000
-        elif self.team is 'Y':
+        elif self.team == 'Y':
             port = 30000
         else:
             raise Exception("Not valid team")
