@@ -82,3 +82,5 @@ while player.robot.step(timestep) != -1:
     player.motor["direito"].setVelocity(dir)
     player.motor["esquerdo"].setVelocity(esq)
 
+# Enter here exit cleanup code.
+com_thread.join()

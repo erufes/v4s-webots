@@ -4,8 +4,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.013444313953623855 0.9144279130847709 0.4045254530851516 3.02885956698711
-  position 0.4683208219402464 3.0669432669196373 -2.191741347743275
+  orientation 0.00012632705173442157 0.9231054024127229 0.3845470063307227 2.9591075953710204
+  position 0.9692712094905285 2.6656197811385725 -2.5638905565563563
 }
 TexturedBackground {
 }
@@ -380,7 +380,6 @@ DEF SOCCER_FIELD Solid {
   locked TRUE
 }
 DEF B1 v4s_robot {
-  hidden rotation_2 1 0 0 0.526053999953637
   translation 2.38824e-07 0.035 -0.47
   rotation 0 1 0 3.14159
   robotName "B1"
@@ -397,9 +396,25 @@ DEF B1 v4s_robot {
   }
   synchronization FALSE
 }
+DEF Y1 v4s_robot {
+  translation 0.009999 0.035 0.41
+  rotation 0 1 0 3.14159
+  robotName "Y1"
+  robotController "remote_controlled_soccer_player"
+  robotAppearance Appearance {
+    material Material {
+      diffuseColor 1 1 0
+    }
+  }
+  wheelsAppearance DEF wheel_appearance Appearance {
+    material Material {
+      diffuseColor 0.8 0.8 0
+    }
+  }
+  synchronization FALSE
+}
 DEF B2 v4s_robot {
-  hidden rotation_2 1 0 0 0.5260539999536694
-  translation -0.35 0.0381772 -2.03924e-08
+  translation -0.35 0.0381772 -0.19
   rotation 0 1 0 -1.5707953071795862
   robotName "B2"
   robotController "remote_controlled_soccer_player"
@@ -411,15 +426,40 @@ DEF B2 v4s_robot {
   wheelsAppearance USE wheel_appearance
   synchronization FALSE
 }
+DEF Y2 v4s_robot {
+  translation -0.37 0.0381772 0.1
+  rotation 0 1 0 -1.5707953071795862
+  robotName "Y2"
+  robotController "remote_controlled_soccer_player"
+  robotAppearance Appearance {
+    material Material {
+      diffuseColor 1 1 0.3
+    }
+  }
+  wheelsAppearance USE wheel_appearance
+  synchronization FALSE
+}
 DEF B3 v4s_robot {
-  hidden rotation_2 1 0 0 0.5260539999536686
-  translation 0.35 0.0381772 0
+  translation 0.35 0.0381772 -0.17
   rotation 0 1 0 1.5708
   robotName "B3"
   robotController "remote_controlled_soccer_player"
   robotAppearance Appearance {
     material Material {
       diffuseColor 0.3 0 1
+    }
+  }
+  wheelsAppearance USE wheel_appearance
+  synchronization FALSE
+}
+DEF Y3 v4s_robot {
+  translation 0.35 0.0381772 0.12
+  rotation 0 1 0 1.5708
+  robotName "Y3"
+  robotController "remote_controlled_soccer_player"
+  robotAppearance Appearance {
+    material Material {
+      diffuseColor 1 0.5 0
     }
   }
   wheelsAppearance USE wheel_appearance

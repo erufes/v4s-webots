@@ -75,7 +75,11 @@ objetos = {
         sim_object(supervisor.getFromDef("B2")),
         sim_object(supervisor.getFromDef("B3")),        
     ],
-    team_y : [],
+    team_y : [
+        sim_object(supervisor.getFromDef("Y1")),
+        sim_object(supervisor.getFromDef("Y2")),
+        sim_object(supervisor.getFromDef("Y3")), 
+    ],
     "ball" : sim_object(supervisor.getFromDef("BALL")),
 }
 
@@ -204,3 +208,4 @@ while supervisor.step(timestep) != -1:
             
 
 # Enter here exit cleanup code.
+com_thread.join()
